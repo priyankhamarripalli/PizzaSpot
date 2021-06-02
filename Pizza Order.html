@@ -1,0 +1,341 @@
+<html>
+<head><title> PIZZA SPOT</title>
+<script language="javascript">
+function tet()
+{
+var p=document.querySelector('input[name = "sizes"]:checked').value
+
+//var q1=document.querySelector('input[id="ao"]:checked').value
+
+var e = document.getElementById("pcrust");
+	var result = e.options[e.selectedIndex].value;
+	
+
+document.f1.totalPrice1.value = '';
+		var sum = 0;
+		for (i=0;i<document.f1.ao.length;i++) {
+		  if (document.f1.ao[i].checked) {
+		  	sum = sum + parseInt(document.f1.ao[i].value);
+}
+}
+
+var sumo=parseInt(p)+parseInt(sum)+parseInt(result);
+document.f1.totalPrice1.value="Rs." +sumo;
+}
+
+
+function getTotal()
+{
+var tot
+tot="Total Cost: "
+
+if(document.f1.d.checked)
+{
+tot=tot+ "20+ "
+}
+if(document.f1.e.checked)
+{
+tot=tot+ "50+ "
+}
+if(document.f1.f.checked)
+{
+tot=tot+ "90+ "
+}
+
+
+if(document.f1.l1.selectedIndex==0)
+{
+tot=tot+ "45+ "
+}
+if(document.f1.l1.selectedIndex==1)
+{
+tot=tot+ "60+ "
+}
+if(document.f1.l1.selectedIndex==2)
+{
+tot=tot+ "80+ "
+}
+
+if(document.f1.c1.checked)
+{
+tot=tot+ "15 "
+}
+if(document.f1.c2.checked)
+{
+tot=tot+ "+30 "
+}
+if(document.f1.c3.checked)
+{
+tot=tot+ "+45 "
+}
+if(document.f1.c4.checked)
+{
+tot=tot+ "+60 "
+}
+document.f1.totalPrice.value=tot
+
+}
+
+
+
+function res()
+{
+var Result
+Result = "Your Order: "
+
+
+if(document.f1.d.checked)
+{
+Result=Result+ "Small sized, "
+}
+if(document.f1.e.checked)
+{
+Result=Result+ "Medium sized, "
+}
+if(document.f1.f.checked)
+{
+Result=Result+ "Large sized, "
+}
+
+
+if(document.f1.l1.selectedIndex==0)
+{
+Result=Result+ "Plain Crust, "
+}
+if(document.f1.l1.selectedIndex==1)
+{
+Result=Result+ "Spicy Crust, "
+}
+if(document.f1.l1.selectedIndex==2)
+{
+Result=Result+ "Cheesy Crust, "
+}
+
+
+if(document.f1.c1.checked)
+{
+Result=Result+ "Extra cheese, "
+}
+if(document.f1.c2.checked)
+{
+Result=Result+ "Bacon, "
+}
+if(document.f1.c3.checked)
+{
+Result=Result+ "Pepperonni, "
+}
+if(document.f1.c4.checked)
+{
+Result=Result+ "Olives & Jalapenos, "
+}
+
+document.f1.txtResult.value=Result
+
+
+}
+
+function res1()
+{
+
+
+if(f1.t1.value)
+{
+alert("Your order has been placed, " +f1.t1.value)
+}
+}
+
+function setTimer()
+{
+timer=setTimeout("alert('Sorry! You have no offer')",30000)
+}
+function clearTimer()
+{
+clearTimeout(timer)
+alert('You secured 20% offer on your order')
+
+}
+
+</script>
+</head>
+<style>
+body{
+             background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)),url(image.jpg);
+             background-position:center;
+             background-size:cover;
+            }
+b{
+font-size:20px;
+color:black;
+}
+input{color:black;
+background-color:honeydew;
+font-family:Verdana;
+font-size:15px;
+}
+p{color:soli-black;}
+input[type="radio"] {
+    background-color: #ddd;
+    background-image: -webkit-linear-gradient(0deg, transparent 20%,
+ hsla(0,0%,100%,.7), transparent 80%),
+                      -webkit-linear-gradient(90deg, transparent 20%, 
+hsla(0,0%,100%,.7), transparent 80%);
+    border-radius: 10px;
+    box-shadow: inset 0 1px 1px hsla(0,0%,100%,.8),
+                0 0 0 1px hsla(0,0%,0%,.6),
+                0 2px 3px hsla(0,0%,0%,.6),
+                0 4px 3px hsla(0,0%,0%,.4),
+                0 6px 6px hsla(0,0%,0%,.2),
+                0 10px 6px hsla(0,0%,0%,.2);
+    cursor: pointer;
+    display: inline-block;
+    height: 15px;
+    margin-right: 15px;
+    position: relative;
+    width: 15px;
+    -webkit-appearance: none;
+}
+input[type="radio"]:after {
+    background-color: #444;
+    border-radius: 25px;
+    box-shadow: inset 0 0 0 1px hsla(0,0%,0%,.4),
+                0 1px 1px hsla(0,0%,100%,.8);
+    content: '';
+    display: block;
+    height: 7px;
+    left: 4px;
+    position: relative;
+    top: 4px;
+    width: 7px;
+}
+input[type="radio"]:checked:after {
+    background-color: #f66;
+    box-shadow: inset 0 0 0 1px hsla(0,0%,0%,.4),
+                inset 0 2px 2px hsla(0,0%,100%,.4),
+                0 1px 1px hsla(0,0%,100%,.8),
+                0 0 2px 2px hsla(0,70%,70%,.4);
+}
+
+
+input[type="checkbox"] {
+    background-color: #ddd;
+    background-image: -webkit-linear-gradient(0deg, transparent 20%,
+ hsla(0,0%,100%,.7), transparent 80%),
+                      -webkit-linear-gradient(90deg, transparent 20%,
+ hsla(0,0%,100%,.7), transparent 80%);
+    border-radius: 0px;
+    box-shadow: inset 0 1px 1px hsla(0,0%,100%,.8),
+                0 0 0 1px hsla(0,0%,0%,.6),
+                0 2px 3px hsla(0,0%,0%,.6),
+                0 4px 3px hsla(0,0%,0%,.4),
+                0 6px 6px hsla(0,0%,0%,.2),
+                0 10px 6px hsla(0,0%,0%,.2);
+    cursor: pointer;
+    display: inline-block;
+    height: 15px;
+    margin-right: 15px;
+    position: relative;
+    width: 15px;
+    -webkit-appearance: none;
+}
+input[type="checkbox"]:after {
+    background-color: #444;
+    border-radius: 50px;
+    box-shadow: inset 0 0 0 1px hsla(0,0%,0%,.4),
+                0 1px 1px hsla(0,0%,100%,.8);
+    content: '';
+    display: block;
+    height: 7px;
+    left: 4px;
+    position: relative;
+    top: 4px;
+    width: 7px;
+}
+input[type="checkbox"]:checked:after {
+    background-color: #f66;
+    box-shadow: inset 0 0 0 1px hsla(0,0%,0%,.4),
+                inset 0 2px 2px hsla(0,0%,100%,.4),
+                0 1px 1px hsla(0,0%,100%,.8),
+                0 0 2px 2px hsla(0,70%,70%,.4);
+}
+select {
+  width: 100%;
+  padding: 16px 20px;
+  border: none;
+  border-radius: 8px;
+  background-color: #f1f1f1;
+  font-family:Engravers MT;
+  font-size:20px;
+}
+
+input[type="text"] {
+	border:2px solid #456879;
+	border-radius:10px;
+	height: 22px;
+	width: 230px;
+}
+
+</style>
+
+<body bgcolor="powderblue" >
+<script language="javascript">
+setTimer()
+
+</script>
+//<table width="1300"><tr><td width="700">
+<h1 style="color:#01123;"><center><font color="navy" face="Sigmar One">PIZZA SPOT
+</font></center></h1>
+<hr align="left">
+<h2 style="color:navy;"><font face="Fugaz One">FILL IN</font></h2>
+<form name="f1" id="pform" onsubmit="return false;">
+
+ <p><label><font face="Lucida Console"><b>CUSTOMER NAME:</b></font>
+ &nbsp;&nbsp;<input  id="a" required type="text" name="t1"></label></p>
+ <p><label><font face="Lucida Console"><b>CONTACT NO:</b></font>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+ <input type="text" id="b" required></label></p>
+ <p><label><font face="Lucida Console"><b>ADDRESS:</b></font>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+ <input type="text" id="c" required></label></p>
+
+<fieldset>
+  <legend style="color:navy"><h2> <font face="Fugaz One">PIZZA SIZE</font></h2> </legend>
+  <p><label class="radio"><input type="radio" name=sizes  id="d" value=20 
+  onclick="res();getTotal();tet();"> <font face="Lemon"><b>Small</b></font></label>
+</p>
+  <p><label class="radio"><input type="radio" name=sizes id="e" value=50 onclick="res();getTotal();tet();"> <font face="Lemon"><b>Medium </b></font></label></p>
+  <p><label class="radio"><input type="radio" name=sizes  id="f" value=90 onclick="res();getTotal();tet();"> <font face="Lemon"><b>Large </b></font></label></p>
+ </fieldset><br>
+
+<fieldset>
+<legend style="color:navy"><h2><font face="Fugaz One"> PIZZA CRUST</font></h2></legend>
+<select onclick="res();getTotal();tet();" name="l1" id="pcrust"><font face="Courgette">
+<option value=45 selected="selected">Plain Crust<br>
+<option value=60>Spicy Crust<br>
+<option value=80>Cheesy Crust<br>
+</font></select><br>
+</fieldset><br>
+
+<fieldset>
+  <legend style="color:navy"><h2><font face="Fugaz One"> PIZZA ADD-ONS</font></h2> </legend>
+<p><label class="checkbox"><input type="checkbox" name="ao" id="c1" value=15 
+onclick="res();getTotal();tet();"> <font face="Permanent Marker"><b>Extra Cheese</b></font><br></label></p>
+<p><label class="checkbox"><input type="checkbox" name="ao" id="c2" value=30 onclick="res();getTotal();tet();"> <font face="Permanent Marker"><b>Bacon</b></font><br></label></p>
+<p><label class="checkbox"><input type="checkbox" name="ao" id="c3" value=45 onclick="res();getTotal();tet();"> <font face="Permanent Marker"><b>Pepperonni</b></font><br></label></p>
+<p><label class="checkbox"><input type="checkbox" name="ao" id="c4" value=60 onclick="res();getTotal();tet();"> <font face="Permanent Marker"><b>Olives & Jalapenos</b></font><br></label></p>
+ </fieldset><br>
+
+<input name="txtResult" size="120" style="width:100%;border-radius:8px;padding:10px 10px;" ><br>
+<br>
+<input name="totalPrice" size="20" style="width:30%;border-radius:8px;padding:10px 10px;" ><font face="Fugaz One"> =</font>
+<input name="totalPrice1" size="20" style="width:30%;border-radius:8px;padding:10px 10px;" ><br>
+<br>
+<input type="submit"  value="PROCESS ORDER" 
+style="font-family:Verdana;border-radius:8px;padding:10px 10px;" 
+onClick="res1();clearTimer();">
+<input type="reset"  value="RESET" 
+style="font-family:Verdana;border-radius:8px;padding:10px 10px;">
+
+
+</form>
+</body>
+</html>
